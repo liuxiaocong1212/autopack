@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>demo</title>
+	<link href="../core/css/base_new.css" rel="stylesheet"/>
+	<style>
+		.content {
+			height: 1100px;
+			background-color: red;
+		}
+		#ov-hidden { }
+		#ov-content-wrapper {
+
+		}
+		#ov-hidden .page_dom {
+			position: fixed;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			font-size: 2rem;
+		}
+		#ov-hidden.loading .load-more {
+			display: block;
+		}
+		#ov-hidden .item {
+			height: 1000px;
+			background-color: salmon;
+		}
+
+	</style>
+</head>
+<body>
+	<div id="ov-hidden">
+		<div id="u_list">
+			<div class="item"></div>
+		</div>
+		<div class="page_dom"></div>	
+	</div>
+	<button id="foo" style="margin-bottom:40px;">clear</button>
+<script src="../core/js/zepto.min.js"></script>
+<script src="js/zepto.loadmore.js"></script>
+<script>
+$(function() {
+	console.log($('#foo'))
+	$('#foo').click(function(){
+		console.log('ff')
+		$("#u_list").empty();
+		loader.reset();
+	});
+	var loadingCount = 0,
+		totalPages = 6,
+ 		colors = ['red', 'blue', 'green', 'yellow', 'salmon', 'purple'];
+
+	var pageCount;
+	var loader = new Loadmore($('#u_list')[0], {
+
+		loadMore: function(page, done) {
+			console.log('load more');
+
+			// load ajax
+			pageCount = page;
+			$('.page_dom').text(page);
+
+			// 模拟数据(联调时去掉延迟)
+			setTimeout(function() {
+					var colorIndex = (pageCount - 1) % colors.length;
+					$('#u_list').append('<div class="item" style=" background-color: ' + colors[colorIndex] + ';">');
+
+					if (pageCount == totalPages) {
+						console.log('desroying');
+						loader.destroy();
+					}
+
+					done();
+
+			}, 0);
+		},
+		bottomBuffer: 600,//预加载临界值
+		//loadingClassTarget: '#ov-hidden'
+	});
+
+});
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>弹性textarea</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <link rel="stylesheet" href="../core/css/base_new.css">
+
+</head>
+<body>
+    <nav></nav>
+    <textarea style="width:300px;" placeholder="在这里输入" id="ta"></textarea>
+    <p>还能输入<span id="left">200</span>个字符</p>
+    <script src='../core/js/zepto.min.js'></script>
+    <script src='./js/zepto.flexTextarea.js'></script>
+    <script>
+        /*
+        使用方法
+        目前textarea需要指定width，否则会有bug，后续再看是否有更好的解决方案
+        $(function(){
+            $("#textarea").flexTextarea({
+                //字长限制
+                maxLength: 120,
+                //剩余字长回调
+                leftLength: function(value){
+                    console.log(value)
+                }
+            });
+        });
+         */
+        $(function(){
+            $('#ta').flexTextarea({
+                maxLength: 200,
+                leftLength: function(value){
+                    $("#left").text(value+'');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,8 @@
+@import "~gome-sasscore/_configure.scss";
+@import "~gome-widgets/toast/toast.scss";
+
+$a: #ef3030;
+body {
+    color: $a;
+    display: flex;
+}

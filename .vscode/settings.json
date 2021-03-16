@@ -1,0 +1,5 @@
+{
+    "eslint.options": { "configFile": ".eslintrc.js" },
+    "eslint.autoFixOnSave": true,
+    "eslint.validate": [ "javascript", "javascriptreact", "html" ]
+}

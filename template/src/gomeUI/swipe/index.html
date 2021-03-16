@@ -1,0 +1,67 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>滑动侧边栏演示页面</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="applicable-device" content="mobile">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="../core/css/base_new.css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="./css/swipe.css" media="screen" title="no title" charset="utf-8">
+    <script type="text/javascript" src="../core/js/zepto.min.js"></script>
+    <script type="text/javascript" src="./js/zepto.swipe.js"></script>
+    <style media="screen">
+    </style>
+</head>
+<body>
+    <div  id="swipe" class="swiper" >
+        <ul>
+            <li>
+                <img src="./Desert.jpg" alt="">
+            </li>
+            <li>
+                <img src="./Koala.jpg" alt="">
+            </li>
+            <li>
+                <img src="./Penguins.jpg" alt="">
+            </li>
+        </ul>
+    </div>
+    <div id="swipe2" class="swiper" >
+        <ul>
+            <li>
+                <img src="./Desert.jpg" alt="">
+            </li>
+            <li>
+                <img src="./Koala.jpg" alt="">
+            </li>
+            <li>
+                <img src="./Penguins.jpg" alt="">
+            </li>
+        </ul>
+    </div>
+
+    <script type="text/javascript">
+        
+        $(function(){
+            $("#swipe").swipeSlider({
+                visibleSlides: 1,
+                autoPlay: true,
+                loop: true,
+                bulletNavigation: 'link'
+            });
+            $("#swipe2").swipeSlider({
+                visibleSlides: 1.5,
+                autoPlay: true,
+                loop: false,
+                bulletNavigation: 'link',
+                afterChange: function(val){
+                    console.log(val.activeIndex)
+                }
+            });
+        });
+    </script>
+</body>
+</html>

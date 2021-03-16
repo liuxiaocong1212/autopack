@@ -1,0 +1,65 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>倒计时</title>
+    <style>
+        .timer div{float: left;}
+        .timer .timedom{background: #ccc}
+    </style>
+</head>
+<body>
+  <div class="timer" id="prod_1"></div>
+  <div class="timer" id="prod_2"></div>
+  <div class="timer" id="prod_3"></div>
+  <div class="timer" id="prod_4"></div>
+<script src="../core/js/zepto.min.js"></script>
+<script src="js/zepto.timer.js"></script>
+<script>
+	$(function(){
+		//Ajax
+		//url: /index.php?prod_id=id...
+
+		
+		var secondsLeft1 = 86400*1000; //s
+		var secondsLeft2 = 86400;
+		var secondsLeft3 = 86400;
+		var secondsLeft4 = 5;
+
+		$('#prod_1').data('seconds-left', secondsLeft1);
+		$('#prod_2').data('seconds-left', secondsLeft2);
+		$('#prod_3').data('seconds-left', secondsLeft3);
+		$('#prod_4').data('seconds-left', secondsLeft4);
+		
+		$('#prod_1').timer({
+			format: 'hh时mm分ss秒',
+			onComplete: function() {
+				console.log('1_complete');
+			}
+		});
+		
+		$('#prod_2').timer({
+			format: 'hh时mm分ss秒',
+			onComplete: function() {
+				console.log('2_complete');
+			}
+		});
+		
+		$('#prod_3').timer({
+			format: 'hh:mm:ss',
+			onComplete: function() {
+				console.log('3_complete');
+			}
+		});
+		
+		$('#prod_4').timer({
+			format: 'hh:mm:ss',
+			onComplete: function() {
+				console.log('4_complete');
+			}
+		});
+		
+
+	})
+</script>
+</body>

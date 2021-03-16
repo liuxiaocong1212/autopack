@@ -1,0 +1,125 @@
+/*
+* @Author: liuxiaocong
+* @Date:   2016-02-14 11:42
+* @Last Modified by:   liuxiaocong
+* @Last modified time: 2016-3-16 18:36
+*/
+.size_pic{
+    background: #f2f2f2;
+}
+.size_pic a{
+    display: block;
+}
+
+.size_pic .h_box,
+.size_pic .big_pic_box{        
+    display: -webkit-box;
+    display: box;
+    display: -webkit-flex;
+    display: -moz-flex;   
+    display: -ms-flexbox;
+    display: flex;
+}
+.size_pic .h_box .big_pic_box .big_pic{
+    display: box;
+    display: -webkit-box;
+}
+.size_pic .h_box .big_pic_box,
+.size_pic .h_box .big_pic,
+.size_pic .v_box,
+.size_pic .h_box > a
+{
+    -webkit-box-flex: 1;
+    -moz-box-flex: 1;
+    -webkit-flex: 1;
+    -ms-flex:1;
+    flex: 1;
+}
+.size_pic .h_box .big_pic_box,
+.size_pic .v_box,
+.size_pic .h_box > a{
+    width: 50%;
+}
+.size_pic .h_box .big_pic{
+    position: relative;
+}
+.size_pic .h_box .big_pic img{
+    position: absolute;
+    height: 100%;
+    z-index: 2;
+}
+.size_pic .h_box:last-child{
+    border-bottom: none;
+    background: #fff;
+}
+.size_pic .h_box .v_box .h_box a:last-child:not(:only-child){
+    position: relative;
+}
+.size_pic .h_box .v_box .h_box a:last-child:not(:only-child) img{
+    height: 100%;
+    position: absolute;
+}
+.size_pic .h_box .v_box:first-child,
+.size_pic .h_box .big_pic_box:first-child,
+.size_pic .h_box>a:first-child:not(:last-child){
+    border-right: 1px solid #f2f2f2;
+}
+.size_pic .h_box .v_box > a:first-child,
+.size_pic .h_box:not(:only-child):not(:last-child){
+    border-bottom: 1px solid #f2f2f2;
+}
+
+
+/*大小图 四图 五图 pecial*/
+.size_pic.special .h_box .big_pic_box{
+    -webkit-box-flex: 0.4;
+    -moz-box-flex: 0.4;
+    -webkit-flex: 0.4;
+    -o-flex: 0.4;
+    -ms-flex: 0.4;
+    flex: 0.4;
+    
+    width: 40%;
+}
+.size_pic.special .v_box{
+    -webkit-box-flex: 0.6;
+    -moz-box-flex: 0.6;
+    -webkit-flex: 0.6;
+    -o-flex: 0.6;
+    -ms-flex: 0.6;
+    flex: 0.6;
+    
+    width: 60%;
+}
+
+/*楼层图默认 内部线*/
+/*没有边框------- noborder */
+.floor_img.noborder .h_box:not(:only-child):not(:last-child){
+    border-bottom: none;
+}
+.floor_img.noborder .h_box li:not(:only-child):not(:last-child){
+    border-right: none;
+}
+
+.size_pic.noborder .h_box div:first-child,
+.size_pic.noborder .h_box>a:first-child:not(:last-child){
+    border-right: none;
+}
+.size_pic.noborder .h_box .v_box > a:first-child,
+.size_pic.noborder .h_box:not(:only-child):not(:last-child){
+    border-bottom: none;
+}
+/*全边线------ allborder */
+.size_pic.allborder{
+    border-top: 1px solid #f2f2f2;
+    border-bottom: 1px solid #f2f2f2;
+}
+
+/*上边线-------  */
+.size_pic.aboveborder{
+    border-top: 1px solid #f2f2f2;
+}
+/*下边线*/
+.size_pic.belowborder{
+    border-bottom: 1px solid #f2f2f2;
+}

@@ -1,0 +1,124 @@
+/*
+ * @Author: baishuang
+ * @Date:   2016-4-28 12:20:01
+ * @Last Modified by:   zhaoye-ds1
+ * 输入框下拉输入框组件样式
+ */
+.input_box {
+    display: box;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    box-align:center;
+    -webkit-box-align:center;
+    -moz-box-align:center;
+    align-items: center;
+    -webkit-align-items:center;
+    height: 3.5rem;
+    border: 1px solid #e6e6e6;
+    padding-right: .5rem;
+    box-sizing: border-box;
+    background: #fff;
+}
+.input_box.disabled{
+    background: #f5f5f5;
+}
+.input_box input {
+    display: block;
+    -webkit-box-flex: 1;
+    -moz-box-flex: 1;
+    -webkit-flex: 1;
+    flex: 1;  
+    width: 100%;
+    height:100%;
+    padding: 0 .5rem 0 1rem;
+    box-sizing: border-box;
+    color: #333;
+    font-size: 1.4rem;
+}
+.input_box .icon_btn{
+    display: none;
+    padding:0 .5rem;
+    font-size: 1.8rem;
+    color: #d2d2d2;
+}
+.input_box .icon_btn.show{
+    display: block;
+}
+.input_box input::-webkit-input-placeholder {
+    color: #999;
+}
+
+.input_box input::-moz-input-placeholder {
+    color: #999;
+}
+
+.input_box input::-ms-input-placeholder {
+    color: #999;
+}
+
+.input_box input[disabled] {
+    background: #f5f5f5;
+}
+
+.input_box input[disabled]::-webkit-input-placeholder {
+    color: #ccc;
+}
+
+.input_box input[disabled]::-moz-input-placeholder {
+    color: #ccc;
+}
+
+.input_box input[disabled]::-ms-input-placeholder {
+    color: #ccc;
+}
+
+.select_box {
+    position: relative;
+    height: 3.5rem;
+    background: #fff;
+}
+.select_view{
+    position: absolute;
+    display: box;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    box-align:center;
+    -webkit-box-align:center;
+    -moz-box-align:center;
+    align-items: center;
+    -webkit-align-items:center;
+    width: 100%;
+    height: 3.5rem;
+    padding: 0 1.1rem;
+     border: 1px solid #e6e6e6;
+    box-sizing: border-box;
+    color: #999;
+}
+.select_view .choose{
+     display: block;
+    -webkit-box-flex: 1;
+    -moz-box-flex: 1;
+    -webkit-flex: 1;
+    flex: 1;  
+}
+.select_view .down{
+    padding-left: 1rem;
+}
+.select{
+    position: absolute;
+    width: 100%;
+    height: 3.5rem;
+    border: 1px solid #e6e6e6;
+    padding: 0 1.1rem;
+    box-sizing: border-box;
+    color: #333;
+}
+
+.select {
+    opacity: 0;
+    filter:Alpha(opacity=0);
+}

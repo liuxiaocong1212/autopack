@@ -1,0 +1,34 @@
+.list li{
+    overflow: hidden;
+    box-sizing: border-box;
+    position: relative;
+    padding-right: 3rem;
+    color: #333;
+    line-height: 4.4rem;
+    background-color: #fff;
+    border-bottom: 1px solid #e6e6e6;
+    font-size: 1.5rem;
+    text-align: left;
+}
+.list.sex li.radio_ckd:after{
+    font-family: "gome_icon";
+    content:attr(data-icon);
+    float: right;
+    color: #69c53b;
+}
+.list.sex li:before{
+    display: none;
+}
+.list.sex .radio{
+    display: block;
+    width: 100%;
+    height: 4.4rem;
+    border: none;
+    border-radius: 0;
+    line-height: 4.4rem;
+    border-bottom: 1px solid #e6e6e6;
+    padding-left: 2rem;
+}
+.list.city .radio{
+    margin: 0 2rem;
+}

@@ -1,0 +1,90 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <title>国美Plus触屏版</title>
+        <meta name="author" content="m.gome.com.cn">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <meta name="format-detection" content="telephone=no">
+        <link rel="stylesheet" type="text/css" href="../core/css/base_new.css">
+        <link rel="stylesheet" type="text/css" href="../core/css/layout.css">
+        <!--start-->
+        <!--wait to concat-->
+        <link rel="stylesheet" type="text/css" href="../aslider/css/zepto.aslider.css">
+        <link rel="stylesheet" type="text/css" href="./css/zepto.address.css">
+        <!--end-->
+    </head>
+    <body>
+        <nav></nav>
+        <div class="grid">
+            <div class="column_5">
+                <p>ffffff</p>
+            </div>
+            <div class="column_5">
+                <p>aaaa</p>
+            </div>
+            <div class="column_2">
+                <p>eeeeee</p>
+            </div>
+        </div>
+        <button  data-aslider-in="address|fade">选择地址</button>
+        <!--<aside class="address" data-aslider="address" style="display:none;">
+            <div class="wrapper">
+                <div class="flexbox title">
+                    <div class="flex1 left">
+                        <h3>当前地址：</h3>
+                        <div class="grid address_tags">
+                            <div class="row">
+                                <div class="column_4">
+                                    <span class="tag tag_province first ellipsis">北京</span>
+                                </div>
+                                <div class="column_4">
+                                    <span class=" tag tag_city ellipsis">北京市</span>
+                                </div>
+                                <div class="column_4">
+                                    <span class=" tag tag_area ellipsis">朝阳区（五环里）</span>
+                                </div>    
+                            </div>
+                            <div class="row">
+                                <div class="column_8">
+                                    <span class=" tag tag_county first ellipsis">全部区域</span>
+                                </div>
+                                <div class="column_4">
+                                    <span class="info"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <h3>请选择地区</h3>
+                    </div>
+                    <div class="right">
+                        <button class="close" data-icon="&#x003f"></button>
+                    </div>
+                </div>
+                <div class="scroll">
+                    <ul class="slider list">
+                    </ul>
+                </div>
+            </div>
+        </aside>-->
+        <script src="../core/js/zepto.min.js"></script>
+        <script src="../aslider/js/zepto.aslider.js"></script>
+        <script src="./js/zepto.address.js"></script>
+        <script>
+            $(function() {
+                window.address = $.address({
+                    itemFlag : 1,
+                    skuId : 0,
+                    goodsNo: 0,
+                    callback: function(level,address,did,cid){
+                        console.log(level)
+                        console.log(address)
+                        console.log(did)
+                        console.log(cid)
+                    }
+                });
+            });
+        </script>
+    </body>
+</html>

@@ -1,0 +1,139 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>tab控件</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="applicable-device" content="mobile">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="../../core/css/base_new.css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="../../core/css/layout.css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="../../swipe/css/swipe.css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="css/tab.css" media="screen" title="no title" charset="utf-8">
+    <style type="text/css">
+        body p {
+            margin: 1rem 0;
+            background-color: #fff;
+        }
+    </style>
+
+</head>
+
+<body>
+    <p>默认切换项为两类类</p>
+    <br>
+    <div class="tab_nav">
+        <ul>
+            <li><a href="javascript:void(0)" class="active">实物订单<span>(5)</span></a></li>
+            <li><a href="javascript:void(0)">手机充值<span>(5)</span></a></li>
+        </ul>
+    </div>
+    <p>默认切换项为三类</p>
+    <br>
+    <div class="tab_nav">
+        <ul>
+            <li><a href="javascript:void(0)" class="active">实物订单<span>(5)</span></a></li>
+            <li><a href="javascript:void(0)">手机充值<span>(5)</span></a></li>
+            <li><a href="javascript:void(0)">彩票<span>(5)</span></a></li>
+        </ul>
+    </div>
+<p>切换项可以滑动,点击可以往前走的。通过<code>data-autoslider-type</code>控制,默认可以自动滚动或者为<code>auto</code></p>
+        <br />
+        <div class="tab_nav tab_nav_swipe" data-autoslider-type='auto'>
+            <ul>
+                <li><a href="javascript:void(0)" class="active">实物订单<span>(5)</span></a></li>
+                <li><a href="javascript:void(0)">手机充值<span>(5)</span></a></li>
+                <li><a href="javascript:void(0)">彩票<span>(5)</span></a></li>
+                <li><a href="javascript:void(0)">手机充值<span>(5)</span></a></li>
+                <li><a href="javascript:void(0)">彩票<span>(5)</span></a></li>
+                <li><a href="javascript:void(0)">手机充值<span>(5)</span></a></li>
+                <li><a href="javascript:void(0)">彩票<span>(5)</span></a></li>
+                <li><a href="javascript:void(0)">实物订单<span>(5)</span></a></li>
+                <li><a href="javascript:void(0)">手机充值<span>(5)</span></a></li>
+                <li><a href="javascript:void(0)">彩票<span>(5)</span></a></li>
+                <li><a href="javascript:void(0)">手机充值<span>(5)</span></a></li>
+                <li><a href="javascript:void(0)">彩票<span>(5)</span></a></li>
+                <li><a href="javascript:void(0)">手机充值<span>(5)</span></a></li>
+                <li><a href="javascript:void(0)">彩票<span>(5)</span></a></li>
+
+            </ul>
+        </div>
+        <br />
+        <p>切换项可以滑动，点击不可往前走的<code>data-autoslider-type=‘manual’</code></p>
+        <br />
+        <div class="tab_nav tab_nav_swipe" data-autoslider-type='manual'>
+            <ul>
+                <li><a href="javascript:void(0)" class="active">实物订单<span>(5)</span></a></li>
+                <li><a href="javascript:void(0)">手机充值<span>(5)</span></a></li>
+                <li><a href="javascript:void(0)">彩票<span>(5)</span></a></li>
+                <li><a href="javascript:void(0)">手机充值<span>(5)</span></a></li>
+                <li><a href="javascript:void(0)">彩票<span>(5)</span></a></li>
+                <li><a href="javascript:void(0)">手机充值<span>(5)</span></a></li>
+                <li><a href="javascript:void(0)">彩票<span>(5)</span></a></li>
+                <li><a href="javascript:void(0)" class="active">实物订单<span>(5)</span></a></li>
+                <li><a href="javascript:void(0)">手机充值<span>(5)</span></a></li>
+                <li><a href="javascript:void(0)">彩票<span>(5)</span></a></li>
+                <li><a href="javascript:void(0)">手机充值<span>(5)</span></a></li>
+                <li><a href="javascript:void(0)">彩票<span>(5)</span></a></li>
+                <li><a href="javascript:void(0)">手机充值<span>(5)</span></a></li>
+                <li><a href="javascript:void(0)">彩票<span>(5)</span></a></li>
+
+            </ul>
+
+        </div>
+        <br />
+        <p>加右边遮挡,通过<code>data-first</code>控制默认选中第几项，下标从0开始。(注意不需要这个属性的时候删掉)</p>
+        <br />
+        <div class="tab_container">
+        <div class="tab_nav_box">
+            <div class="tab_nav tab_nav_swipe tab_nav_hasmore" data-first='1'>
+                <ul>
+                    <li><a href="javascript:void(0)" class="active">实物订单<span>(5)</span></a></li>
+                    <li><a href="javascript:void(0)">手机充值<span>(5)</span></a></li>
+                    <li><a href="javascript:void(0)">彩票<span>(5)</span></a></li>
+                    <li><a href="javascript:void(0)">手机充值<span>(5)</span></a></li>
+                    <li><a href="javascript:void(0)">彩票<span>(5)</span></a></li>
+                    <li><a href="javascript:void(0)">手机充值<span>(5)</span></a></li>
+                    <li><a href="javascript:void(0)">彩票<span>(5)</span></a></li>
+                    <li><a href="javascript:void(0)" class="active">实物订单<span>(5)</span></a></li>
+                    <li><a href="javascript:void(0)">手机充值<span>(5)</span></a></li>
+                    <li><a href="javascript:void(0)">彩票<span>(5)</span></a></li>
+                    <li><a href="javascript:void(0)">手机充值<span>(5)</span></a></li>
+                    <li><a href="javascript:void(0)">彩票<span>(5)</span></a></li>
+                    <li><a href="javascript:void(0)">手机充值<span>(5)</span></a></li>
+                    <li><a href="javascript:void(0)">彩票<span>(5)</span></a></li>
+                </ul>
+            </div>
+            <div class="tab_show_more" data-flag="0">
+                <i data-icon="_"></i>
+            </div>
+        </div>
+        <ul class="tab_nav_morelist">
+             <li><a href="javascript:void(0)" class="active">实物订单<span>(5)</span></a></li>
+                    <li><a href="javascript:void(0)">手机充值<span>(5)</span></a></li>
+                    <li><a href="javascript:void(0)">彩票<span>(5)</span></a></li>
+                    <li><a href="javascript:void(0)">手机充值<span>(5)</span></a></li>
+                    <li><a href="javascript:void(0)">彩票<span>(5)</span></a></li>
+                    <li><a href="javascript:void(0)">手机充值<span>(5)</span></a></li>
+                    <li><a href="javascript:void(0)">彩票<span>(5)</span></a></li>
+                    <li><a href="javascript:void(0)">实物订单<span>(5)</span></a></li>
+                    <li><a href="javascript:void(0)">手机充值<span>(5)</span></a></li>
+                    <li><a href="javascript:void(0)">彩票<span>(5)</span></a></li>
+                    <li><a href="javascript:void(0)">手机充值<span>(5)</span></a></li>
+                    <li><a href="javascript:void(0)">彩票<span>(5)</span></a></li>
+                    <li><a href="javascript:void(0)">手机充值<span>(5)</span></a></li>
+                    <li><a href="javascript:void(0)">彩票<span>(5)</span></a></li>
+        </ul>
+    </div>
+
+    <script type="text/javascript" src="../../core/js/zepto.min.js"></script>
+    <script type="text/javascript" src="../../swipe/js/zepto.swipe.js"></script>
+    <script type="text/javascript" src="js/tab.js"></script>
+    <script type="text/javascript">
+    </script>
+</body>
+
+</html>

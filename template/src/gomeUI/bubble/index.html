@@ -1,0 +1,114 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>弹出气泡演示页面</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="applicable-device" content="mobile">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="../core/css/base_new.css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="../core/css/layout.css" media="screen" title="no title" charset="utf-8">
+    <style media="screen">
+        body{
+            height: 1000px;
+            background-color: #F9F9F5;
+        }
+        code {
+            padding: 2px 4px;
+            font-size: 90%;
+            color: #c7254e;
+            background-color: #f9f2f4;
+            border-radius: 4px;
+        }
+        .grid {
+            margin-bottom: 1rem;
+
+        }
+        .column_4 {
+            padding: 1rem 0;
+            background-color: #f5f5f5;
+        }
+        .column_4 button,
+        .column_4 a{
+            margin-bottom: .5rem;
+        }
+        [data-icon] {
+            display: block;
+        }
+        .bubble {
+            padding: .25rem;
+            background-color: rgba(0,0,0,.5);
+            color: #fff;
+            border-radius: .3rem;
+        }
+        .icon2 i:before {
+            height: 10rem;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+
+    </nav>
+    <div class="grid">
+        <div class="column_4 icon1">
+            <a href="#">
+                <i data-icon="&#x0031"></i>
+            </a>
+        </div>
+        <div class="column_4 icon1">
+            <i data-icon="&#x0031"></i>
+        </div>
+        <div class="column_4 icon1">
+            <i data-icon="&#x0031"></i>
+        </div>
+    </div>
+    <div class="grid">
+        <div class="column_4 icon2">
+            <i data-icon="&#x0032"></i>
+        </div>
+        <div class="column_4 icon2">
+            <i data-icon="&#x0032"></i>
+        </div>
+        <div class="column_4 icon2">
+            <i data-icon="&#x0032"></i>
+        </div>
+    </div>
+    <img src="Koala.jpg" data-lazyload='Penguins.jpg'>
+    <script type="text/javascript" src="../core/js/zepto.min.js"></script>
+    <script type="text/javascript" src="../extend/zepto.lazyload.js"></script>
+    <script type="text/javascript" src="zepto.bubble.js"></script>
+    <script>
+        if($.fn.bubble){
+            $('.icon1').bubble({
+                //默认模板
+                template:       '<p class="bubble">'
+                            +       '123456'
+                            +   '</p>'
+            });
+            $(".icon2 i").bubble({
+                data: 'I am data',
+                /**
+                 * 每次气泡弹出前的回调，可以动态指定需要显示的内容（模板）
+                 * @param bubble Bubble 气泡的类实例
+                 * @return template string 返回需要渲染的模板
+                 */
+                beforeShow: function(bubble){
+                    //bubble
+                    //@bubble.$el : dom选择器中点击的dom元素
+                    //@bubble.options : 在bubble插件调用时传入的参数
+                    console.log(bubble.$el)
+                    console.log(bubble.options.data)
+                    var template =      '<p class="bubble">'
+                                    +       Math.random()
+                                    +   '</p>';
+                    return template;
+                }
+            });
+        }
+
+    </script>
+</body>
+</html>

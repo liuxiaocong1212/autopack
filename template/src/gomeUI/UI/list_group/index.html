@@ -1,0 +1,265 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>group_list</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="applicable-device" content="mobile">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="../../core/css/base_new.css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="../../core/css/layout.css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="./css/list_grp.css" media="screen" title="no title" charset="utf-8">
+    <style media="screen">
+        a.react {
+            display: block;
+            height: 100%;
+        }
+        body ul {
+            margin: 1rem 0;
+        }
+        body>p:nth-child(1),
+        body>p:nth-child(2),
+        body>p:nth-child(3),
+        body>p:nth-child(4),
+        body>p:nth-child(5),
+        body>p:nth-child(6) {
+            background-color: #fff;
+            margin: .5rem 0;
+        }
+    </style>
+</head>
+<body>
+    <br>
+    <p>
+        1.list_grp为列表组的类，可以通过为其添加noborder类，控制list的上下border显隐
+    </p>
+    <p>
+        2.可以为li添加nav_item类，用来控制右侧箭头的显隐
+    </p>
+    <p>
+        3.icon_wrapper为左侧图标的容器，小图标，即字体图标，添加i标签
+    </p>
+    <p>
+        4.大图标即图片，添加带有.img_wrapper的div 和img标签
+    </p>
+    <p>
+        5.content类是文本域，title为文字,desc为描述，title必须保留，若文本为空，则标签内为空即可，若没有desc则不添加此标签即可
+    </p>
+    <br>
+    <p>
+        列表组
+    </p>
+    <ul class='list_grp'>
+        <li class="nav_item">
+            <a href="javascript:void(0);">
+                <div class="icon_wrapper">
+                    <i data-icon="&#x005b"></i>
+                </div>
+                <div class="content">
+                    <p class="title">带导航标签</p>
+                    <small class="desc">有描述</small>
+                </div>
+            </a>
+        </li>
+        <li class="nav_item">
+            <a href="javascript:void(0);">
+                <div class="icon_wrapper">
+                    <div class="img_wrapper">
+                        <img src='./000D449D.gif'>
+                    </div>
+                </div>
+                <div class="content">
+                    <p class="title">没描述，使用图片</p>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="javascript:void(0);">
+                <div class="icon_wrapper">
+                    <div class="img_wrapper">
+                        <img src='./000D449D.gif'>
+                    </div>
+                </div>
+                <div class="content">
+                    <p class="title">没导航标签，使用图片，单行</p>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="javascript:void(0);">
+                <div class="icon_wrapper">
+                </div>
+                <div class="content">
+                    <p class="title">最简单的</p>
+                </div>
+            </a>
+        </li>
+        <li class="nav_item">
+            <a href="javascript:void(0);">
+                <div class="icon_wrapper">
+                </div>
+                <div class="content">
+                    <p class="title">没有图标的</p>
+                    <small class="desc">描述</small>
+                </div>
+            </a>
+        </li>
+    </ul>
+    <br>
+    <p>
+        只有一个列表项
+    </p>
+    <p>
+        有边框
+    </p>
+    <ul class='list_grp'>
+        <li class="nav_item">
+            <a href="javascript:void(0);">
+                <div class="icon_wrapper">
+                    <i data-icon="&#x005b"></i>
+                </div>
+                <div class="content">
+                    <p class="title">正www文</p>
+                    <small class="desc">描述</small>
+                </div>
+            </a>
+        </li>
+    </ul>
+    <p>
+        无边框
+    </p>
+    <ul class='list_grp noborder'>
+        <li class="nav_item">
+            <a href="javascript:void(0);">
+                <div class="icon_wrapper">
+                    <i data-icon="&#x005b"></i>
+                </div>
+                <div class="content">
+                    <p class="title">正www文</p>
+                    <small class="desc">描述</small>
+                </div>
+            </a>
+        </li>
+    </ul>
+    <br>
+    <p>
+        其他例子
+    </p>
+    <ul class="list_grp noborder">
+        <li class="nav_item">
+            <a href="javascript:void(0);">
+                <div class="icon_wrapper">
+                    <i data-icon="&#006a"></i>
+                </div>
+                <div class="content">
+                    <p class="title">1</p>
+                    <small class="desc">1</small>
+                </div>
+            </a>
+        </li>
+        <li class="nav_item">
+            <a href="javascript:void(0);">
+                <div class="icon_wrapper">
+                    <i data-icon="&#006a"></i>
+                </div>
+                <div class="content">
+                    <p class="title">2</p>
+                    <small class="desc">2</small>
+                </div>
+            </a>
+        </li>
+        <li class="nav_item">
+            <a href="javascript:void(0);">
+                <div class="icon_wrapper">
+                    <i data-icon="&#006a"></i>
+                </div>
+                <div class="content">
+                    <p class="title">3</p>
+                    <small class="desc">3</small>
+                </div>
+            </a>
+        </li>
+    </ul>
+    <br>
+    <ul class="list_grp">
+        <li>
+            <a href="javascript:void(0);">
+                <div class="icon_wrapper">
+                    <div class="img_wrapper">
+                        <img src="./000D449D.gif">
+                    </div>
+                </div>
+                <div class="content">
+                    <p class="title">1</p>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="javascript:void(0);">
+                <div class="icon_wrapper">
+                    <div class="img_wrapper">
+                        <img src="./000D449D.gif">
+                    </div>
+                </div>
+                <div class="content">
+                    <p class="title">2</p>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="javascript:void(0);">
+                <div class="icon_wrapper">
+                    <div class="img_wrapper">
+                        <img src="./000D449D.gif">
+                    </div>
+                </div>
+                <div class="content">
+                    <p class="title">3</p>
+                </div>
+            </a>
+        </li>
+    </ul>
+    <br>
+    <ul class="list_grp noborder">
+        <li class="nav_item">
+            <a href="javascript:void(0);">
+                <div class="icon_wrapper">
+                    <div class="img_wrapper">
+                        <img src="./000D449D.gif">
+                    </div>
+                </div>
+                <div class="content">
+                    <p class="title">1 <span class="float_r">float_right</span></p>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="javascript:void(0);">
+                <div class="icon_wrapper">
+                    <div class="img_wrapper">
+                        <img src="./000D449D.gif">
+                    </div>
+                </div>
+                <div class="content">
+                    <p class="title">2</p>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="javascript:void(0);">
+                <div class="icon_wrapper">
+                    <div class="img_wrapper">
+                        <img src="./000D449D.gif">
+                    </div>
+                </div>
+                <div class="content">
+                    <p class="title">3</p>
+                </div>
+            </a>
+        </li>
+    </ul>
+    <script type="text/javascript" src="../../core/js/zepto.min.js"></script>
+</body>
+</html>

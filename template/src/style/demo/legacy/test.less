@@ -1,0 +1,24 @@
+@import '~gome-ui-kit/components/less/var.less';
+@import './a.less';
+#www {
+    color: #EF3333;
+    font-size: 10px;
+    display: flex;
+}
+@fruit: banana, apple, pear, potato, carrot, peach;
+
+#fruit {
+    .for-each(@value in @fruit) {
+        some: @value;
+    }
+}
+
+.function {
+    .foo(@x) {
+        return: @x * 2;
+    }
+}
+
+div {
+    width: foo(21em); // -> 42em
+}

@@ -1,0 +1,155 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>option</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="applicable-device" content="mobile">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="../../core/css/base.css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="css/option.css" media="screen" title="no title" charset="utf-8">
+    <style>
+        .grid3,
+        .grid,.radio_grp {
+            background: #fff;
+            padding: 1rem;
+        }
+        
+        h2 {
+            font-weight: bold;
+            font-size: 1.5rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <div class="grid3">
+            <p>
+                未选中
+            </p>
+            <p>
+                不可选
+            </p>
+            <p>
+                不可点击
+            </p>
+        </div>
+        <h2>单选</h2>
+        <p>当选项有多个，用户可以选择一个且必须选择一个的情况。</p>
+        <div class="grid3">
+            <div>
+                <span class="radio radio_default" data-radio="testradio"></span>
+            </div>
+            <div>
+                <span class="radio radio_default disabled" data-radio="testradio"></span>
+            </div>
+            <div>
+                <span class="radio radio_default checked" data-radio="testradio"></span>
+            </div>
+        </div>
+        <div class="radio_grp">
+            <div class="radio_grp_item">
+                <span class="radio radio_default" data-radio="testradio2"></span><label class="flex1">选项一</label>
+            </div>
+            <div class="radio_grp_item">
+                <span class="radio radio_default disabled" data-radio="testradio2"></span><label>选项二</label>
+            </div>
+            <div class="radio_grp_item">
+                <span class="radio radio_default checked" data-radio="testradio2"></span><label>选项三</label>
+            </div>
+        </div>
+        <div class="grid3">
+            <div>
+                <span class="radio radio_tag " data-radio="testradio22">电脑配件</span>
+            </div>
+            <div>
+                <span class="radio radio_tag disabled" data-radio="testradio22">耗材</span>
+            </div>
+            <div>
+                <span class="radio radio_tag checked" data-radio="testradio22">明细</span>
+            </div>
+        </div>
+
+        <h2>多选</h2>
+        <p>当选项有多个，用户可以选择多个情况。</p>
+        <div class="grid">
+            <div class="column_4">
+                <span class="checkbox" data-checkbox="test"></span>
+            </div>
+            <div class="column_4">
+                <span class="checkbox disabled" data-checkbox="test"></span>
+            </div>
+            <div class="column_4">
+                <span class="checkbox checked" data-checkbox="test"></span>
+            </div>
+        </div>
+        <h2>选中</h2>
+        <p>当选项有多个，当选项有多个，用户可以选择一个，可以不选择的情况。。</p>
+        <div class="grid">
+            <div class="column_4">
+                <span class="radio option" data-radio="cantoggle1"></span>
+            </div>
+            <div class="column_4">
+                <span class="radio option disabled" data-radio="cantoggle1"></span>
+            </div>
+            <div class="column_4">
+                <span class="radio option checked" data-radio="cantoggle1"></span>
+            </div>
+        </div>
+        <div class="grid">
+            <div class="column_4">
+                <span class="radio option_tag" data-radio="cantoggle"></span>
+            </div>
+            <div class="column_4">
+                <span class="radio option_tag disabled" data-radio="cantoggle"></span>
+            </div>
+            <div class="column_4">
+                <span class="radio option_tag checked" data-radio="cantoggle"></span>
+            </div>
+        </div>
+        <h2>开关</h2>
+        <div class="box" style="background:#fff;padding:1rem;">
+            <div class="switch">
+                <span class="switch_btn"></span>
+            </div>
+            <div class="switch closed">
+                <span class="switch_btn"></span>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="../../core/js/zepto.min.js"></script>
+    <script src="js/zepto.option.js"></script>
+    <script type="text/javascript" src="js/switch.js"></script>
+    <script>
+        $(function() {
+            $("[data-checkbox]").iCheck({
+                onChange: function(val, $el, $group) {
+                    console.log('选取的值：' + val);
+                    console.log('点击的选项：');
+                    console.log($el);
+                    console.log('点击的选项组：');
+                    console.log($group);
+                },
+            });
+            
+            /**2016/3/6默认选中类名是radio_ckd,自定义的是checked,采用哪个类名注意html里用对应类名**/
+            $("[data-radio]").radio({
+            canToggle: true,
+            checkedClass:'checked',//扩展选中类名是checked
+            onChange: function(val,$el,$group){
+                /*console.log('选取的值：'+val);
+                console.log('点击的选项：');
+                console.log($el);
+                console.log('点击的选项组：');
+                console.log($group);*/
+            }
+        });
+        })
+    </script>
+</body>
+
+</html>

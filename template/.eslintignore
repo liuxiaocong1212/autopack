@@ -1,0 +1,9 @@
+*.eslintrc.js
+.entryrc.js
+webpack.config.js
+/node_modules/*
+bin/
+lib/
+dist/
+server/
+src/

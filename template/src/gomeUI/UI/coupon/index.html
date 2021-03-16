@@ -1,0 +1,156 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>优惠劵</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="applicable-device" content="mobile">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="../../core/css/base_new.css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="../../core/css/layout.css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="css/coupon.css" media="screen" title="no title" charset="utf-8">
+    <style>
+        h3 {
+            margin-bottom: 0.5rem;
+            font-size: 1.6rem;
+        }
+    </style>
+</head>
+
+<body>
+    <section style="padding:1rem;">
+        <p>1.标题单行文字居中显示，两行正常显示，超出两行显示省略号</p>
+        <p>2.红劵、蓝劵、店铺劵、品牌劵、折扣劵，颜色不同各自在coupon中加各自类名</p>
+        <p>3.标题下desc区域不能删除，没有文字的情况下置空</p>
+        <p>4.date日期为即将过期时，加入overdate类，字号变大</p>
+        <h3>红劵</h3>
+        <div class="coupon_box">
+            <div class="coupon red_coupon">
+                <span class="type">红劵</span>
+                <p class="amount">
+                    <span>￥</span>
+                    <strong>5</strong>
+                </p>
+                <span class="date overdate">即将过期</span>
+            </div>
+            <div class="coupon_con">
+                <p class="title"><span class="ellipsis_two">优惠优惠劵标题</span>
+                </p>
+                <a class="desc ellipsis" href="javascript:void(0);">进入店铺进入店铺进入店铺进入店铺>></a>
+                <p class="start_time time">开始时间<span>2014.12.15 23:59:59</span>
+                </p>
+                <p class="end_time time">结束时间<span>2014.12.15 23:59:59</span>
+                </p>
+            </div>
+        </div>
+        <h3>红劵</h3>
+        <div class="coupon_box">
+            <div class="coupon red_coupon none_coupon">
+                <span class="type">红劵</span>
+                <p class="amount">
+                    <span>￥</span>
+                    <strong>5</strong>
+                </p>
+                <span class="date overdate">已过期</span>
+            </div>
+            <div class="coupon_con">
+                <img class="state" src="images/over_date.png" alt="">
+                <p class="title"><span class="ellipsis_two">优惠优惠劵优惠优惠劵优惠优惠劵优惠优惠劵优惠优惠劵优惠优惠劵标题</span>
+                </p>
+                <a class="desc ellipsis" href="javascript:void(0);">进入店铺>></a>
+                <p class="start_time time">开始时间<span>2014.12.15 23:59:59</span>
+                </p>
+                <p class="end_time time">结束时间<span>2014.12.15 23:59:59</span>
+                </p>
+            </div>
+        </div>
+        <h3>蓝劵</h3>
+        <div class="coupon_box">
+            <div class="coupon blue_coupon">
+                <span class="type">蓝劵</span>
+                <p class="amount">
+                    <span>￥</span>
+                    <strong>5</strong>
+                </p>
+                <span class="date overdate">即将过期</span>
+            </div>
+            <div class="coupon_con">
+                <p class="title"><span class="ellipsis_two">优惠优惠劵优惠优惠劵优惠优惠劵优惠优惠劵优惠优惠劵优惠优惠劵标题</span>
+                </p>
+                <a class="desc ellipsis" href="javascript:void(0);">进入店铺>></a>
+                <p class="start_time time">开始时间<span>2014.12.15 23:59:59</span>
+                </p>
+                <p class="end_time time">结束时间<span>2014.12.15 23:59:59</span>
+                </p>
+            </div>
+        </div>
+        <h3>店铺劵</h3>
+        <div class="coupon_box">
+            <div class="coupon shop_coupon">
+                <span class="type">店铺劵</span>
+                <p class="amount">
+                    <span>￥</span>
+                    <strong>5</strong>
+                </p>
+                <span class="date">活动即将开始</span>
+            </div>
+            <div class="coupon_con">
+                <img class="state" src="images/used.png" alt="">
+                <p class="title"><span class="ellipsis_two">优惠优惠劵优惠优惠劵优惠优惠劵优惠优惠劵优惠优惠劵优惠优惠劵标题</span>
+                </p>
+                <a class="desc ellipsis" href="javascript:void(0);">进入店铺>></a>
+                <p class="start_time time">开始时间<span>2014.12.15 23:59:59</span>
+                </p>
+                <p class="end_time time">结束时间<span>2014.12.15 23:59:59</span>
+                </p>
+            </div>
+        </div>
+        <h3>品牌劵</h3>
+        <div class="coupon_box">
+            <div class="coupon brand_coupon">
+                <span class="type">品牌劵</span>
+                <p class="amount">
+                    <span>￥</span>
+                    <strong>5</strong>
+                </p>
+                <span class="date">活动即将开始</span>
+            </div>
+            <div class="coupon_con">
+                <p class="title"><span class="ellipsis_two">优惠优惠劵优惠优惠劵优惠优惠劵优惠优惠劵优惠优惠劵优惠优惠劵标题</span>
+                </p>
+                <a class="desc ellipsis" href="javascript:void(0);">进入店铺>></a>
+                <p class="start_time time">开始时间<span>2014.12.15 23:59:59</span>
+                </p>
+                <p class="end_time time">结束时间<span>2014.12.15 23:59:59</span>
+                </p>
+            </div>
+        </div>
+        <h3>折扣劵</h3>
+        <div class="coupon_box">
+            <div class="coupon discount_coupon">
+                <span class="type">折扣劵</span>
+                <p class="amount">
+                    <span>￥</span>
+                    <strong>5</strong>
+                </p>
+                <span class="date">还有199天过期</span>
+            </div>
+            <div class="coupon_con">
+                <p class="title"><span class="ellipsis_two">优惠优惠劵优惠优惠劵优惠优惠劵优惠优惠劵优惠优惠劵优惠优惠劵标题</span>
+                </p>
+                <a class="desc ellipsis" href="javascript:void(0);">进入店铺>></a>
+                <p class="start_time time">开始时间<span>2014.12.15 23:59:59</span>
+                </p>
+                <p class="end_time time">结束时间<span>2014.12.15 23:59:59</span>
+                </p>
+            </div>
+        </div>
+
+    </section>
+    <script type="text/javascript" src="../../core/js/zepto.min.js"></script>
+</body>
+
+</html>

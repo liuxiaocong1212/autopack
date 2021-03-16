@@ -1,0 +1,152 @@
+.tab_nav .swiper-pagination {
+    display: none;
+}
+
+.tab_nav {
+    background-color: #fff;
+    border-bottom: 1px solid #e6e6e6;
+    box-sizing: border-box;
+}
+
+.tab_nav:not(.tab_nav_swipe) {
+    padding: 0 2.5rem;
+}
+
+.tab_nav ul li {
+    text-align: center;
+    font-size: 1.4rem;
+    height: 100%;
+    width: auto;
+    line-height: 4.2rem;
+}
+
+.tab_nav:not(.tab_nav_swipe) ul {
+    display: -webkit-box;
+    display: box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.tab_nav:not(.tab_nav_swipe) ul li {
+    display: block;
+    -webkit-box-flex: 1;
+    -moz-box-flex: 1;
+    -webkit-flex: 1;
+    flex: 1;
+    box-flex: 1;
+}
+
+.tab_nav ul li a,.tab_nav ul li span{
+    display:inline-block;
+    color: #333;
+}
+
+.tab_nav ul li a.active,.tab_nav ul li span.active{
+    border-bottom: 2px solid #ff5c5c;
+    color: #ff5c5c;
+    box-sizing: border-box;
+}
+
+/*
+.tab_nav ul li.swiper-slide-active a.active{
+    border-bottom: .2rem solid #ff5c5c;
+    color: #ff5c5c;
+    box-sizing: border-box;
+}
+*/
+
+.tab_nav_swipe ul li {
+    line-height: 4.1rem;
+    padding: 0 1.1rem;
+}
+
+.tab_nav_swipe ul li a {
+    height: 100%;
+}
+
+.tab_nav_swipe {
+    margin: 0 auto;
+    height: 4.5rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.tab_nav_swipe ul {
+    display: -webkit-box;
+    /* Fix of Webkit flickering */
+    
+    z-index: 1;
+}
+/* 右边遮挡 */
+
+.tab_container {
+    position: relative;
+}
+/*.tab_container .tab_nav{
+    margin-right:4.4rem;
+}
+*/
+
+.tab_nav_box {
+    position: relative;
+    height: 4.5rem;
+    border-bottom: 1px solid #e6e6e6;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.tab_nav_box .tab_nav {
+    margin-right: 4.4rem;
+    border: none;
+}
+
+.tab_show_more {
+    position: absolute;
+    z-index: 9999;
+    right: 0;
+    top: 0;
+    width: 4.4rem;
+    line-height: 4.5rem;
+    background: url("../images/bor-img_03.png") left center no-repeat #fff;
+    background-size: 0.25rem 4rem;
+    text-align: center;
+    color: #7f7f7f;
+}
+
+.tab_nav_morelist {
+    position: absolute;
+    display: none;
+    top: 4.5rem;
+    background: #fff;
+    width: 100%;
+    max-width: 640px;
+    height: auto;
+    z-index: 9999;
+    box-shadow: 0px 5px 14px #d6d6d6;
+    overflow: hidden;
+}
+
+.tab_nav_morelist li {
+    float: left;
+    width: 25%;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+.tab_nav_morelist li a,
+.tab_show_more i {
+    display: block;
+}
+
+.tab_nav_morelist li a.active {
+    color: #ff5c5c;
+}
+
+.tab_show_more i.down {
+    transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+}

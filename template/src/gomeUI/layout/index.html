@@ -1,0 +1,219 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>布局演示</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="applicable-device" content="mobile">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="../core/css/base_new.css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="../core/css/layout.css" media="screen" title="no title" charset="utf-8">
+    <style media="screen">
+        body {
+            text-align: center;
+        }
+        .column_1,
+        .column_2,
+        .column_3,
+        .column_4,
+        .column_5,
+        .column_6,
+        .column_7,
+        .column_8,
+        .column_9,
+        .column_10,
+        .column_11,
+        .column_12,
+        .grid3 > *,
+        .flexbox > * {
+            background-color: #fff;
+            padding: .25rem;
+        }
+        .grid p,
+        .grid3 p,
+        .flexbox p {
+            line-height: 2.4rem;
+            background-color: #e6e6e6;
+            color: #999;
+        }
+        body > p{
+            text-align: left;
+            line-height: 1.5;
+        }
+        .box {
+            height: 30rem;
+            background-color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <h2>栅格系统</h2>
+    <br>
+    <p>
+        栅格系统将一个区块划定为一个具有12列的横行，
+        通过为一个标签指定grid类，是一个区块成为一个栅格。
+    </p>
+    <br>
+    <p>
+        通过为栅格中的区块指定column_1 ~ column_12类，可以让其中的区块占有相应的行数
+    </p>
+    <br>
+    <p>
+        须保证grid内的column相加等于12，column之和大于12的话，将会导致column换行出现
+    </p>
+    <br>
+    <div class="grid">
+        <div class="column_4"><p>column_4</p></div>
+        <div class="column_4"><p>column_4</p></div>
+        <div class="column_4"><p>column_4</p></div>
+    </div>
+    <br>
+    <div class="grid">
+        <div class="column_1">
+            <p>col_1</p>
+        </div>
+        <div class="column_8">
+            <p>column_8</p>
+        </div>
+        <div class="column_3">
+            <p>column_3</p>
+        </div>
+    </div>
+    <br>
+    <div class="grid">
+        <div class="column_5"><p  style="line-height:4.8rem;">column_5</p></div>
+        <div class="column_7">
+            <p>column_7 line1</p>
+            <p>column_7 line2</p>
+        </div>
+    </div>
+    <br>
+    <br>
+    <h2>栅格系统快捷方式</h2>
+    <br>
+    <p>
+        给一个区块直接指定grid2 ~ grid5, 则这个区块内的子区块，不需要指定任何类就按2-5平均排布。
+    </p>
+    <br>
+    <p>
+        请保证gridX下的子标签数量等于gridX中X的数量。
+    </p>
+    <br>
+    <div class="grid3">
+        <div>
+            <p>
+                column
+            </p>
+        </div>
+        <div>
+            <p>
+                column
+            </p>
+        </div>
+        <div>
+            <p>
+                column
+            </p>
+        </div>
+    </div>
+    <br>
+    <br>
+    <h2>flexbox，弹性盒子</h2>
+    <br>
+    <p>
+        弹性盒子允许其子区块自动填充区域
+    </p>
+    <br>
+    <p>比如行div中，有几个区块，其中有些区块是指定了固定宽度的，而另一些区块自动填充即可。</p>
+    <br>
+    <p>那么给自动填充的区块指定flex1 ~ flex5，则这个区块就会自动填充剩下的区域。</p>
+    <br>
+    <p>flex1 ~ flex5代表占据剩余区域的比例。</p>
+    <br>
+    <p>如： flexbox下只有一个flex1，则flex1占据1/1的剩余区域</p>
+    <br>
+    <p>另如： flexbox下有flex1和flex2，则flex1占据1/(1+2)，flex2占据2/(1+2)</p>
+    <br>
+    <p>
+        如果没有定宽的区块，那么剩余的区块其实就是100%的宽度
+    </p>
+    <div class="flexbox">
+        <div class="flex1">
+            <p>
+                1/3
+            </p>
+        </div>
+        <div class="flex2">
+            <p>
+                2/3
+            </p>
+        </div>
+    </div>
+    <br>
+    <p>
+        一般这种情况比较常见，比如有三个按钮，两侧都有固定宽度，中间的自动填满
+    </p>
+    <div class="flexbox">
+        <div style="width:3rem;">
+            <p>
+                定宽1
+            </p>
+        </div>
+        <div class="flex1">
+            <p>
+                设了flex1-5的类，会自动填充剩下的区域
+            </p>
+        </div>
+        <div style="width:6rem;">
+            <p>
+                定宽2
+            </p>
+        </div>
+    </div>
+    <br>
+    <p>
+        另一个示例
+    </p>
+    <div class="flexbox">
+        <div style="width:3rem;">
+            <p>
+                定宽
+            </p>
+        </div>
+        <div class="flex2">
+            <p>
+                2/5
+            </p>
+        </div>
+        <div class="flex3">
+            <p>
+                2/5
+            </p>
+        </div>
+    </div>
+    <br>
+    <br>
+    <h2>box类，这里用于控制水平和竖直居中</h2>
+    <br>
+    <p>
+        比如最经典的水平竖直居中
+    </p>
+    <div class="box center">
+        <img src="Koala.jpg" style="width: 7rem; height: 5rem;">
+    </div>
+    <p>
+        还有只水平居中
+    </p>
+    <div class="box h_center">
+        <img src="Koala.jpg" style="width: 7rem; height: 5rem;">
+    </div>
+    <p>
+        只竖直居中
+    </p>
+    <div class="box v_center">
+        <img src="Koala.jpg" style="width: 7rem; height: 5rem;">
+    </div>
+</body>
+</html>

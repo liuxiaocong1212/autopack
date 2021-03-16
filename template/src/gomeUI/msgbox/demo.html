@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>消息提示框</title>
+    <meta charset='utf-8'>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <link href="../core/css/base_new.css" rel="stylesheet"/>
+    <link href="css/zepto.msgbox.css" rel="stylesheet"/>
+</head>
+<body>
+	<!-- 公共文件 -->
+    <script src="../core/js/zepto.min.js"></script>
+    <script src='../UI/button/js/btn.js'></script>
+    <script src="js/zepto.msgbox.js"></script>
+    <script>
+        $(function(){
+			alert({
+				type : 'alert',
+				title : '请输入密码',
+				content :   ['<div style="text-align:left;">'
+                            ,'   <input value="aaa">'
+                            ,'   <p>fff</p>'
+                            ,'   <p>fffff</p>'
+                            ,'</div>'].join(''),//'您还没有登录！', //可以直接写 <input type="spassword"/>之类
+            	closeBtn : true, //关闭按钮
+                //是否有返回按钮
+				backBtn: true,
+                //返回的回调
+                back: function(){
+                    console.log('back')
+                },
+                cancel: function(){
+                    console.log('fff')
+                },
+                cancelText: 'quxiao',
+				confirm: buy,
+                //设置确定按钮的样式 
+                confirmType:'reverse',
+				confirmText: '确认使用'
+            });
+//            alert('干掉原生的 Alert!');
+
+/*            alert({
+				type : 'toast',
+				content : '您还没有登录！', //可以直接写 <input type="spassword"/>之类
+            	time: 1000,
+                finish: function(){
+                    console.log('toast结束')
+                }
+            });*/
+
+            /*alert({
+                type: 'loading'
+            });*/
+            $(function(){
+                $(document).click(function(){
+                  //  loading.close();
+                });
+            })
+            function buy(){
+            	console.log('buy function');
+            	return false //不关闭对话框
+            }
+
+        })
+    </script>
+</body>
+</html>

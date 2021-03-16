@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>环形进度条</title>
+    <meta charset='utf-8'>
+    <link href="../core/css/base_new.css" rel="stylesheet"/>
+</head>
+<body>
+    <div id="progress1"></div>
+    <div id="progress2"></div>  
+    <script src="../core/js/zepto.min.js"></script>  
+    <script src="js/zepto.progress.js"></script>
+    <script>
+		$('#progress1').progress({
+    		initValue: 40
+    	});
+    
+    var progressObj = progress('#progress2',{
+    	percentage: false,
+    	format: '￥ ##,##,###'
+    
+    });
+    progressObj.drawAnimate(80);
+    </script>
+</body>
+</html>

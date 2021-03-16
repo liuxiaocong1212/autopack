@@ -1,0 +1,7 @@
+.star_bar,.star_bar_score{
+    overflow: hidden;
+}
+.star_bar i,.star_bar_score i{
+    float: left;
+    color: #ffcc01;
+}

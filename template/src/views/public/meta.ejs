@@ -1,0 +1,15 @@
+<script>
+    (function(){
+        var meta = document.createElement('meta')
+        meta.setAttribute('name','viewport')
+        var devicePixelRatio = window.devicePixelRatio
+        var dpr = devicePixelRatio ? (1 / devicePixelRatio) : 1
+        if(window.screen.availWidth == document.documentElement.offsetWidth){
+            dpr = 1
+            devicePixelRatio = 1
+        }
+        document.documentElement.setAttribute('data-dpr', devicePixelRatio || 1)
+        meta.setAttribute('content', 'initial-scale='+ dpr +', maximum-scale='+ dpr +', minimum-scale=' + dpr + ', user-scalable=no')
+        document.head.appendChild(meta)
+    })()
+</script>

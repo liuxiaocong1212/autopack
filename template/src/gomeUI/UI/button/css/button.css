@@ -1,0 +1,137 @@
+/*
+ * @Author: zhudanmei
+ * @Date:   2015-09-21 12:20:01
+ * @Last Modified by:   zhudanmei
+ * 按钮组件样式
+ */
+.remove_btns_space{
+    font-size: 0;
+    -webkit-text-size-adjust:none;
+}
+.btn{
+    display: inline-block;
+    padding: 0 1rem;
+    font-size: 1.2rem;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    box-sizing: border-box;
+    
+}
+.btn_block{
+    display: block;
+    width:100%;
+}
+.btn_default{
+    border: .1rem solid #e6e6e6;
+    border-radius: .2rem;
+    height: 2.8rem;
+    font-size: 1.4rem;
+    line-height: 2.6rem;
+    background-color: #fff;
+    color: #666;
+}
+.btn_default.active{
+    background-color: #e6e6e6;
+}
+.btn_default.disabled{
+    opacity: .3;
+}
+.btn_default_strong{
+    border: .1rem solid #ff5c5c;
+    border-radius: .2rem;
+    height: 2.8rem;
+    font-size: 1.4rem;
+    line-height: 2.6rem;
+    background-color: #fff;
+    color: #ff5c5c;
+}
+.btn_default_strong.active{
+    background-color: #ff5c5c;
+    color: #fff;
+}
+.btn_default_strong.disabled{
+    opacity: .3;
+}
+.btn_icon{
+    border: .1rem solid #666;
+    border-radius: .2rem;
+    height: 2.8rem;
+    font-size: 1.4rem;
+    line-height: 2.6rem;
+    background-color: #fff;
+    color: #666;
+}
+.btn_icon:before {
+    display: inline-block;
+    margin-right: .5rem;
+    width: 1.4rem;
+    font-size: 1.4rem;
+    line-height: 2.6rem;
+}
+.btn_icon.active{
+    background-color: #666;
+    color: #fff;
+}
+.btn_icon.disabled{
+    opacity: .3;
+}
+.btn_default_large{
+    border: 1px solid #d2d2d2;
+    border-radius: .2rem;
+    height: 4rem;
+    font-size: 1.4rem;
+    line-height: 3.9rem;
+    background-color: #fff;
+    color: #333;
+}
+.btn_default_large.active{
+    background-color: #e6e6e6;
+    color: #333;
+}
+.btn_default_large.disabled{
+    opacity: .3;
+}
+.btn_solid{
+    border-radius: .2rem;
+    height: 3.6rem;
+    font-size: 1.4rem;
+    line-height: 3.6rem;
+    background-color: #ff5c5c;
+    color: #fff;
+}
+.btn_solid.active{
+   background-color: #cf0909;
+}
+.btn_solid.disabled{
+    background-color: #e6e6e6;
+    color: #ccc;
+}
+.btn_solid_large{
+    border-radius: .2rem;
+    height: 4.2rem;
+    font-size: 1.8rem;
+    line-height: 4.2rem;
+    background-color: #ff5c5c;
+    color: #fff;
+}
+.btn_solid_large.active{
+    background-color: #cf0909;
+}
+.btn_solid_large.disabled{
+    opacity: .3;
+}
+.btn_solid_noradius{
+    height: 4.2rem;
+    font-size: 1.8rem;
+    line-height: 4.2rem;
+    background-color: #ff5c5c;
+    color: #fff;
+}
+.btn_solid_noradius.active{
+    background-color: #cf0909;
+}
+.btn_solid_noradius.disabled{
+    background-color: #e6e6e6;
+    color: #ccc;
+}

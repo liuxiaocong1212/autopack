@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <title>webpack</title>
+    <% include ../../public/head.ejs %>
+    <% include ../../public/meta.ejs %>
+    <% include ../../public/font.ejs %>
+    <!--@start-->
+    <!--@compile: css-->
+    <!--@file: {CSS_CDN_IP}/www/entry.css>-->
+        <link rel="stylesheet" href="{CSS_CDN_IP}/gome-dll-ui-kit/dist/v1/uiKit.css">
+        <link rel="stylesheet" href="{CSS_CDN_IP}/www/entry.css">
+    <!--@end-->
+</head>
+<body>
+
+<div id="app">
+<p>页面应该是空白，因为没有配置.entryrc中的webpack入口</p>
+<p>要查看此demo，请自行配置.entryrc中的webpack入口</p>
+</div>
+<script 
+        data-base="{PLUS_STATIC_RESOURCES}"
+        data-main="/js/demo/webpack/index.js"
+        src="{PLUS_ANALYSIS_JS}">
+</script>
+</body>
+</html>

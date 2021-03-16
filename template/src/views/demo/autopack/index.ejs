@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <title>legacy</title>
+    <% include ../../public/head.ejs %>
+    <% include ../../public/meta.ejs %>
+    <% include ../../public/font.ejs %>
+    <!--@start-->
+    <!--@compile: css-->
+    <!--@file: {CSS_CDN_IP}/demo/legacy/scsstest.css>-->
+    <link rel="stylesheet" href="{PLUS_STATIC_RESOURCES}/style/demo/legacy/scsstest.css">
+    <!--@end-->
+</head>
+<body>
+    <script 
+        data-base="{PLUS_STATIC_RESOURCES}"
+        data-main="/js/demo/autopack/index.js"
+        src="{PLUS_ANALYSIS_JS}">
+    </script>
+</body>
+</html>

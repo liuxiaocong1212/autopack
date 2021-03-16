@@ -1,0 +1,47 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>单选插件演示</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="applicable-device" content="mobile">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="../core/css/base_new.css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="./style.css" media="screen" title="no title" charset="utf-8">
+    <script type="text/javascript" src="../core/js/zepto.min.js"></script>
+    <script type="text/javascript" src="./js/zepto.option.js"></script>
+</head>
+<body>
+    <ul class="list sex radio_grp_list ">
+        <li class="radio radio_ckd" data-radio="sex" data-icon="&#x0041">男</li>
+        <li class="radio" data-radio="sex" data-icon="&#x0041">女</li>
+    </ul>
+    <br>
+    <ul class="list city radio_grp_list ">
+        <li>
+            <i class="radio radio_ckd" data-radio="city" ></i>北京
+        </li>
+        <li>
+            <i class="radio" data-radio="city"></i>上海
+        </li>
+        <li>
+            <i class="radio" data-radio="city"></i>广州
+        </li>
+    </ul>
+    <script type="text/javascript">
+        $("[data-radio]").radio({
+            canToggle: true,
+            onChange: function(val,$el,$group){
+                /*console.log('选取的值：'+val);
+                console.log('点击的选项：');
+                console.log($el);
+                console.log('点击的选项组：');
+                console.log($group);*/
+            }
+        });
+        //如果通过下拉刷新等方式追加了radio，则重新执行一遍radio命令$("[data-radio]").radio({canToggle:true})
+    </script>
+</body>
+</html>

@@ -1,0 +1,75 @@
+/* 
+* @Author: zhaoye-ds1
+* @Date:   2015-08-18 13:28:06
+* @Last Modified by:   zhaoye-ds1
+* @Last Modified time: 2015-08-18 16:46:23
+*/
+.address[data-aslider="address"] {
+    font-size: 1.2rem;
+}
+.address[data-aslider="address"] .wrapper {
+    width: 90% !important;
+    background-color: #f7f7f7;
+}
+
+.address[data-aslider="address"] .title {
+    padding-top: 1.5rem;
+    padding-left: 1.5rem;
+}
+.address[data-aslider="address"] .title .right {
+    width: 4rem;
+    text-align: center;
+}
+.address[data-aslider="address"] .title .close {
+    background-color: #f7f7f7;
+    color: #e1e1e1;
+    font-size: 2.2rem;
+}
+
+.address[data-aslider="address"] .title h3{
+    margin-bottom: 1.5rem;
+}
+
+.address[data-aslider="address"] .title .tag{
+    box-sizing: border-box;
+    display: block;
+    margin-left: 1rem;
+    padding: .5rem 1rem;
+    line-height: 1;
+    border: 1px solid #e6e6e6;
+    text-align: center;
+}
+
+.address[data-aslider="address"] .title .tag.first:first-child{
+    margin-left: 0;
+}
+.address[data-aslider="address"] .title .address_tags {
+    margin-bottom: 2rem;
+}
+.address[data-aslider="address"] .title .address_tags .row:first-child{
+    margin-bottom: 1rem;
+}
+
+.address[data-aslider="address"] .list{
+    padding: 0;
+    margin: 0;
+    background-color: #f7f7f7;
+    padding-left: 1.5rem;
+}
+
+.address[data-aslider="address"] .list .item{
+    padding: 0;
+    margin: 0;
+    text-align: left;
+    border: none;
+    height: 4.4rem;
+    line-height: 4.4rem;
+    background-color: #f7f7f7;
+    border-bottom: 1px solid #e6e6e6;
+    font-size: 1.2rem;
+    color: #000;
+}
+.address[data-aslider="address"] .list .item:hover{
+    color: #dc4950;
+    border-color: #dc4950;
+}

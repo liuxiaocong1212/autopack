@@ -1,0 +1,310 @@
+/*
+ * @Author: baishuang
+ * @Date:   2015-11-4 12:20:01
+ * @Last Modified by:baishuang
+ * 单选框复选框组件样式
+ */
+
+.radio {
+    display: inline-block;
+    background: #fff;
+}
+
+.radio_default {
+    display: box;
+    display: -webkit-box;
+    display: flex;
+    display: -webkit-flex;
+    display: -ms-flex;
+    align-items: center;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    box-align: center;
+    justify-content: center;
+    -webkit-justify-content: center;
+    -webkit-box-pack: center;
+    width: 1.6rem;
+    height: 1.6rem;
+    border: 1px solid #c7c7c7;
+    border-radius: 1.6rem;
+    overflow: hidden;
+}
+
+.radio_default.radio_ckd {
+    border: 1px solid #ff5151;
+}
+
+.radio_default.radio_ckd:before {
+    display: block;
+    width: 1.2rem;
+    height: 1.2rem;
+    border-radius: 1.2rem;
+    background: #ff5151;
+    content: ' ';
+}
+
+.radio_default.checked {
+    border: 1px solid #ff5151;
+}
+
+.radio_default.checked:before {
+    display: block;
+    width: 1.2rem;
+    height: 1.2rem;
+    border-radius: 1.2rem;
+    background: #ff5151;
+    content: ' ';
+}
+
+.radio_default.disabled {
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.radio_default.disabled:before {
+    display: block;
+    width: 1.6rem;
+    height: 0;
+    border-top: 1px solid #c7c7c7;
+    content: '';
+}
+
+.radio_grp {
+    display: box;
+    display: -webkit-box;
+    display: flex;
+    display: -webkit-flex;
+    display: -ms-flex;
+}
+
+.radio_grp .radio_grp_item {
+    display: box;
+    display: -webkit-box;
+    display: flex;
+    display: -webkit-flex;
+    display: -ms-flex;
+    align-items: center;
+    -webkit-align-items: center;
+    box-align: center;
+    -webkit-box-align: center;
+    -moz-box-align: center;
+    flex: 1;
+    -webkit-flex: 1;
+    -webkit-box-flex: 1;
+    -moz-box-flex: 1;
+}
+
+.radio_grp .radio_grp_item .radio {
+    margin-right: 0.3rem;
+}
+
+.radio_tag {
+    display: box;
+    display: -webkit-box;
+    display: flex;
+    display: -webkit-flex;
+    display: -ms-flex;
+    box-align: center;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-justify-content: center;
+    width:auto;
+    height: 3.3rem;
+    min-width: 9rem;
+    padding: 0 1rem;
+    border: 1px solid #d2d2d2;
+    border-radius: 0.2rem;
+    text-align: center;
+    color: #666;
+    box-sizing: border-box;
+}
+
+.radio_tag.checked,
+.radio_tag.radio_ckd {
+    position: relative;
+    border: 1px #ff5c5c solid;
+    color: #ff5c5c;
+}
+
+.radio_tag.checked:before,
+.radio_tag.radio_ckd:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-top: 2rem solid #ff5c5c;
+    border-right: 2rem solid transparent;
+    content: " ";
+    border-radius: 0;
+    margin: 0;
+}
+
+.radio_tag.checked:after,
+.radio_tag.radio_ckd:after {
+    position: absolute;
+    top: 0.1rem;
+    left: 0.1rem;
+    content: "A";
+    font-family: "gome_icon";
+    color: #fff;
+    line-height: 1rem;
+}
+
+.radio_tag.disabled {
+    background: #f4f4f4;
+    color: #d6d6d6;
+    border: 1px solid #f4f4f4;
+}
+
+.checkbox,
+.option_tag,
+.option {
+    display: box;
+    display: -webkit-box;
+    display: -webkit-flex-box;
+    display: flex;
+    display: -webkit-flex;
+    align-items: center;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    justify-content: center;
+    -webkit-justify-content: center;
+    -webkit-box-pack: center;
+    -webkit-flex-pack: center;
+    width: 2.2rem;
+    height: 2.2rem;
+    border: 2px solid #c7c7c7;
+    border-radius: 2.2rem;
+    box-sizing: border-box;
+    background: #fff;
+    overflow: hidden;
+}
+
+.option {
+    border: none;
+}
+
+.checkbox.disabled {
+    border: 2px solid #f2f2f2;
+}
+
+.checkbox.checked {
+    background: #ff5c5c;
+    border: 2px solid #ff5c5c;
+}
+
+.checkbox.checked:before,
+.option.checked:before,
+.option_tag.checked:before {
+    display: block;
+    line-height: 2rem;
+    text-align: center;
+    font-size: 1.4rem;
+    color: #fff;
+    font-family: "gome_icon";
+    content: "A";
+}
+
+.option.checked:before,
+.option_tag.checked:before {
+    color: #ff5151;
+}
+
+.option.radio_ckd:before,
+.option_tag.radio_ckd:before {
+    width: 1.4rem;
+    height: 1.4rem;
+    font-size: 1.4rem;
+    color: #fff;
+    font-family: "gome_icon";
+    content: "A";
+    background: none;
+    margin: 0;
+}
+
+.option.radio_ckd:before,
+.option_tag.radio_ckd:before {
+    color: #ff5151;
+}
+
+.option_tag {
+    border: 2px solid #e0e0e0;
+}
+
+.option_tag.disabled {
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.option_tag.disabled:before {
+    display: block;
+    width: 2.2rem;
+    height: 0;
+    border-top: 2px solid #e0e0e0;
+    content: '';
+}
+
+.switch {
+    position: relative;
+    width: 4.9rem;
+    height: 2.9rem;
+    border: 0.1rem solid #ff5151;
+    border-radius: 2.9rem;
+    box-sizing: border-box;
+    overflow: hidden;
+    -webkit-transition: background 0.1s;
+    -webkit-transition-delay: 0.1s;
+    background: #ff5151;
+}
+
+.switch .switch_btn {
+    position: absolute;
+    -webkit-transform: translateX(74%);
+    transform: translateX(74%);
+    -webkit-transition: 0.1s;
+    transition: 0.1s;
+    width: 2.7rem;
+    height: 2.7rem;
+    border: 1px solid #e5e5e5;
+    border-radius: 2.7rem;
+    background: #fff;
+    box-sizing: border-box;
+    box-shadow: 0 0.15rem 0.2rem rgba(0, 0, 0, 0.1);
+}
+
+.switch.closed {
+    border: 0.1rem solid #eee;
+    -webkit-transition: background 0.1s;
+    -webkit-transition-delay: 0.05s;
+    background: #fff;
+}
+
+.switch.closed .switch_btn {
+    -webkit-transform: translateX(0%);
+    transform: translateX(0%);
+    -webkit-transition: '0.1s';
+    transition: 0.1s;
+}
+/*
+.radio {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border: 1px #ccc solid;
+    border-radius: 16px
+}
+
+.radio_ckd:before {
+    float: left;
+    width: 12px;
+    height: 12px;
+    margin: 2px;
+    background: -webkit-linear-gradient(top, #e30000, #bb0101);
+    border-radius: 12px;
+    content: ''
+}
+*/
