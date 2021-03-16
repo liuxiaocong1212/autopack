@@ -170,3 +170,5 @@
 ## 1.2.20 release hot-fix
 
 * .npmrc配置scope的registry，在linux下失败，伪造了一个4.99.99的sinon版本
+
+更新版本
